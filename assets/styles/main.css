@@ -1,0 +1,521 @@
+/*--------------------------------------------------------- 
+Common
+-----------------------------------------------------------*/
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: var(--light-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --blue:rgb(0, 242, 255);
+    --black:black;
+    --dark-gray:gray;
+    --light-gray:rgb(248 248 248);
+}
+
+/*--------------------------------------------------------- 
+Buttons
+-----------------------------------------------------------*/
+.filled-btn{
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.filled-btn:hover{
+    color: #fff;
+}
+
+.outlined-btn{
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.outlined-btn:hover{
+    color: var(--blue);
+}
+
+/*--------------------------------------------------------- 
+Swiper
+-----------------------------------------------------------*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------------- 
+Titles & Description
+-----------------------------------------------------------*/
+.section-sub-title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.section-main-title{
+    text-transform: capitalize;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.section-description{
+    color: var(--dark-gray);
+    font-size: 16px;
+}
+
+/*--------------------------------------------------------- 
+Header
+-----------------------------------------------------------*/
+header{
+    background-color: #fff;
+}
+
+header nav a{
+    color: var(--dark-gray) !important;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+header .nav-item.dropdown .dropdown-toggle::after{
+    content: url('../icons/down-arrow.svg');
+    display: inline-block;
+    border: none;
+    vertical-align: baseline;
+}
+
+header .navbar-toggler img{
+    height: 50px;
+}
+
+/*--------------------------------------------------------- 
+Banner 
+-----------------------------------------------------------*/
+.banner {
+    height: 100vh;
+    position: relative;
+}
+
+.banner .section-sub-title{
+    color: var(--blue);
+}
+
+.banner .section-main-title{
+    color: #fff;
+}
+
+.banner .bannerSwiper .swiper-slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: start;
+}
+
+.banner .bannerSwiper .swiper-slide .section-main-title{
+    margin-bottom: 25px;
+}
+
+.buttons-container a{
+    margin-right: 20px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+@media(max-width:992px){
+    .buttons-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: fit-content;
+    }
+
+    .buttons-container a{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:480px){
+    .banner .bannerSwiper .swiper-slide{
+        padding-top: 150px;
+    }
+}
+
+/*--------------------------------------------------------- 
+Who we are section
+-----------------------------------------------------------*/
+.who-we-are{
+    padding: 100px 0px;
+    background-color: #fff;
+}
+
+.who-we-are .section-description{
+    padding: 20px 0px;
+}
+
+@media(max-width:992px){
+    .who-we-are .section-sub-title{
+        padding-top: 20px;
+    }
+}
+
+/*--------------------------------------------------------- 
+Why choose us section
+-----------------------------------------------------------*/
+.why-choose-us{
+    background-color: var(--light-gray);
+    padding: 100px 0px;
+}
+
+.why-choose-us .section-description{
+    padding: 20px 0px;
+}
+
+/*--------------------------------------------------------- 
+What we offer section
+-----------------------------------------------------------*/
+.what-we-offer{
+    padding: 100px 0px;
+    background-color: #fff;
+}
+
+.what-we-offer .card{
+    border: none;
+    margin-top: 20px;
+    border-radius: 0;
+}
+
+.what-we-offer .card .card-body{
+    color: var(--dark-gray);
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+/*--------------------------------------------------------- 
+Featured product section
+-----------------------------------------------------------*/
+.featured-products{
+    padding: 100px 0px;
+}
+
+.featured-products .card{
+    border: none;
+    border-radius: 0;
+    margin-top: 20px;
+}
+
+.featured-products .card .card-body{
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    font-weight: 700;
+    font-style: 18px;
+    text-transform: capitalize;
+}
+
+/*--------------------------------------------------------- 
+Footer top section
+-----------------------------------------------------------*/
+.footer-top{
+    background-color: var(--blue);
+    padding: 100px 0px;
+}
+
+.footer-top .section-main-title{
+    color: #fff;
+}
+
+.footer-top .filled-btn{
+    background-color: #fff;
+    color: var(--blue);
+}
+
+/*--------------------------------------------------------- 
+Footer section
+-----------------------------------------------------------*/
+footer{
+    padding: 100px 0px;
+}
+
+footer .footer-list{
+    padding: 0;
+    list-style: none;
+}
+
+footer .footer-list-title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+footer .footer-list li{
+    margin-bottom: 10px;
+}
+
+footer .footer-list a{
+    text-decoration: none;
+    color: var(--dark-gray);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+footer .footer-list a img{
+    height: 20px;
+    margin-right: 20px;
+}
+
+/*--------------------------------------------------------- 
+Contact Us Page
+-----------------------------------------------------------*/
+/*--------------------------------------------------------- 
+Map
+-----------------------------------------------------------*/
+#map {
+    height: 400px;
+    width: 100%;
+}
+/*--------------------------------------------------------- 
+Form
+-----------------------------------------------------------*/
+.contact-us-page{
+    padding: 100px 0px;
+    background-color: #fff;
+}
+
+.contact-us-page .section-description{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.contact-us-page .contact-details .text{
+    color: var(--black);
+    font-weight: 700;
+    padding-top: 25px;
+}
+
+.contact-us-page .card{
+    border: none;
+    box-shadow: 0px 0px 20px #0000001D;
+    border-radius: 20px;
+    padding: 25px;
+    background-color: var(--light-gray);
+}
+
+.contact-us-page .card .card-title{
+    color: var(--dark-gray);
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-us-page form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-page form label{
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.contact-us-page form input{
+    border: none;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+.contact-us-page form input::placeholder{
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.contact-us-page form input:focus{
+    outline: none;
+}
+
+.contact-us-page form textarea{
+    border: none;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+.contact-us-page form textarea::placeholder{
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.contact-us-page form textarea:focus{
+    outline: none;
+}
+
+.contact-us-page form button{
+    margin-bottom: 15px;
+}
+
+.contact-us-page .declaration{
+    color: var(--dark-blue);
+    font-size: 12px;
+}
+
+@media(max-width:992px){
+    .contact-us-page .card{
+        margin-top: 25px;
+    }
+}
+
+/*--------------------------------------------------------- 
+Single Product Page
+-----------------------------------------------------------*/
+.product-detail-page{
+    background-color: #fff;
+    padding: 100px 0px;
+}
+
+.product-detail-page .section-sub-title{
+    font-size: 16px;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.product-detail-page .section-main-title{
+    padding: 20px 0px;
+}
+
+.product-detail-page .section-description{
+    padding-bottom: 20px;
+}
+
+/*--------------------------------------------------------- 
+All Products Page
+-----------------------------------------------------------*/
+.all-products{
+    padding: 100px 0px;
+}
+
+.all-products .section-sub-title{
+    font-size: 16px;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.all-products .card{
+    border: none;
+    border-radius: 0;
+    margin-top: 20px;
+}
+
+.all-products .card .card-body{
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    font-weight: 700;
+    font-style: 18px;
+    text-transform: capitalize;
+}
+
+/*--------------------------------------------------------- 
+All Services Page
+-----------------------------------------------------------*/
+.inner-banner{
+    height: 70vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.all-services{
+    padding: 100px 0px;
+    background-color: #fff;
+}
+
+.all-services .section-sub-title{
+    font-size: 16px;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.all-services .card{
+    border: none;
+    border-radius: 0;
+    margin-top: 20px;
+}
+
+.all-services .card .card-body{
+    background-color: #fff;
+    color: var(--dark-gray);
+    font-weight: 700;
+    font-style: 18px;
+    text-transform: capitalize;
+}
+
+/*--------------------------------------------------------- 
+Single Services Page
+-----------------------------------------------------------*/
+.single-services{
+    padding: 100px 0px;
+}
+
+.single-services .section-sub-title{
+    font-size: 16px;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.single-services .section-main-title{
+    padding: 25px 0px;
+}
